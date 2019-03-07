@@ -237,7 +237,6 @@ Why I don't like this method:
 
 - There is a lot of variable lookup and casting vs the dependency injection model of option 1.
 - Local debugging through Visual Studio and IISExpress didn't work out of the box.
-- It looks like you define you 
 - You're missing out on a ton of application tooling from Microsoft.
 
 For example, an HTTP 200 response with the AWS template:
