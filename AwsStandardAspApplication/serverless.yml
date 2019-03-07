@@ -1,0 +1,17 @@
+﻿service: AwsStandardAspApplication
+
+provider:
+  name: aws
+  runtime: dotnetcore2.1
+  region: us-east-1
+
+package:
+  artifact: bin/release/netcoreapp2.1/deploy-package.zip
+
+functions:
+  api:
+    handler: AwsStandardAspApplication::AwsStandardAspApplication.LambdaEntryPoint::FunctionHandlerAsync
+    events:
+     - http:
+         path: /{proxy+}
+         method: ANY
